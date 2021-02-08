@@ -1,0 +1,15 @@
+@font-face {
+	font-family:LetraMarca;
+	src: url(LetraMarca.ttf);
+}
+
+#Nav {
+	background-color: #FFEFC4;
+}
+
+#Marca {
+	font-family:LetraMarca;
+	color: #BF4F4F;
+    font-size: 60px;
+    padding-left: 20px;
+}
