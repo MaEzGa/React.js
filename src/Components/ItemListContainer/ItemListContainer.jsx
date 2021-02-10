@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './ItemListContainer.css';
-import ItemList from '../../Components/ItemList/ItemList';
+import ItemList from '../ItemList/ItemList';
 import InfoProductos from '../../mocks/productList';
 
 
