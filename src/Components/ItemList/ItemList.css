@@ -1,3 +1,5 @@
-#catalogo {
+#Catalogo {
     background-color: #EFDCFF;
+    display: flex;
+    justify-content: space-between;
 }

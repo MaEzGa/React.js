@@ -1,3 +1,6 @@
+import './Item.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Item = ({ product }) => {
     return (
         <div className="col-4 text-center">
@@ -7,7 +10,7 @@ const Item = ({ product }) => {
                 <p className="card-text">{product.price}</p>
                 <a href="#" className="btn btn-primary">Agregar al Carrito</a>
             </div>
-        </div> 
+        </div>
     );
 };   
 
