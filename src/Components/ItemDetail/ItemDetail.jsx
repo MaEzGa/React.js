@@ -1,7 +1,6 @@
-const ItemDetail = ({ productos }) => {
+const ItemDetail = ({ producto }) => {
 
     return(
-        
         <div className="col-4 text-center">
             <img src="/images/sh1.png" className="img-fluid" alt="..."/>
             <div className="card-body">
@@ -11,7 +10,6 @@ const ItemDetail = ({ productos }) => {
                 <a href="#" className="btn btn-primary">Agregar al Carrito</a>
             </div>
         </div>
-        
     );
 };
 

@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/navbar/';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import ItemCount from './Components/Count/ItemCount';
-import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
-
+import ItemList from './Components/ItemList/ItemList';
+import Home from './Components/HomeContainer/HomeContainer'
+import Contactos from './Components/ContactoContainer/ContactoContainer'
+import Footer from './Components/Footer/Footer'
 import  {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 
@@ -14,12 +14,21 @@ const App = () => {
   const handleAdd = (counter) =>{}
 
   return (
-    <>
-      <Navbar/>
-      <ItemListContainer greeting={'Bienvenidos a Arrecife de Coral'}/>
-      <ItemCount onAdd={handleAdd} stock={20} inicial={0} />  
-      <ItemDetailContainer />
-    </>
+      <BrowserRouter>
+        <Navbar/>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/Productos/:CategoryId">
+              <ItemList />
+            </Route>
+            <Route exact path="/Contacto">
+              <Contactos />
+            </Route>   
+        </Switch>
+        <Footer />
+      </BrowserRouter>
   );
 }
 

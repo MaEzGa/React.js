@@ -1,35 +1,36 @@
 import './navbar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom';
+import DropdownButton from 'react-bootstrap/DropdownButton'
+
 
 const Navbar = () => {
     return (
-    <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="Nav">
+    <nav className="navbar navbar-expand-lg navbar-light" id="Nav">
       <div className="container-fluid">
         <div>
           <img src="images/Logo.png" alt="Logo" />
         </div>
-        <a className="navbar-brand" id="Marca">Arrecife de Coral</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <p className="navbar-brand" id="Marca">Arrecife de Coral</p>
+        <div className="collapse navbar-collapse">
           <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <a data-scroll className="nav-link" href="#Home">Home</a>
+            <li className="nav-item active">
+              <Link to={'/'}><p id="Navegador">Home</p></Link>  
             </li>
+            <DropdownButton id="dropdown-basic-button" title="Productos">
+              <Link to={'/Productos/Shampoo'}><li>Shampoo</li></Link>
+              <Link to={'/Productos/Acondicionador'}><li>Acondicionador</li></Link>
+              <Link to={'/Productos/Desodorante'}><li>Desodorante</li></Link>
+              <Link to={'/Productos/Crema corporal'}><li>Crema corporal</li></Link>
+            </DropdownButton>
             <li className="nav-item">
-              <a data-scroll className="nav-link" href="#Arrecife">El Arrecife</a>
-            </li>
-            <li className="nav-item">
-              <a data-scroll className="nav-link" href="#Catalogo">Poductos</a>
-            </li>
-            <li className="nav-item">
-              <a data-scroll className="nav-link" href="#Contactos">Contactos</a>
+              <Link to={'/Contacto'}><p id="Navegador">Contacto</p></Link> 
             </li>   
           </ul>
         </div>
       </div>
     </nav>
+    
     );
 }
 

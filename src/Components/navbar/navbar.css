@@ -5,6 +5,7 @@
 
 #Nav {
 	background-color: #FFEFC4;
+	text-align: center;
 }
 
 #Marca {
@@ -13,3 +14,25 @@
     font-size: 60px;
     padding-left: 20px;
 }
+
+#Navegador {
+	color: #BF4F4F;
+	padding-right: 50px;
+	margin-top: 6px;
+	text-decoration: none;
+}
+
+li {
+	color: #BF4F4F;
+	text-align: center;
+}
+
+#dropdown-basic-button {
+	background-color: #FFEFC4;
+	color: #BF4F4F;
+	border: none;
+	box-shadow: none;
+	padding-right: 50px;
+}
+
+
